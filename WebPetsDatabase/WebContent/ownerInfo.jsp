@@ -8,8 +8,9 @@
 <title>Owner Information</title>
 </head>
 <body>
+<form method = "post" action = "navigationServlet">
 <table>
-<c:forEach items="{requestScopre.allItems}" var="currentitem">
+<c:forEach items="${requestScope.allItems}" var="currentitem">
 <tr>
    <td><input type="radio" name="id" value="${currentitem.id}"></td>
 <td>${currentitem.type}</td>
@@ -18,6 +19,9 @@
 </tr>
 </c:forEach>
 </table>
-
+<input type = "submit" value = "edit" name="doThisToItem">
+<input type = "submit" value = "delete" name="doThisToItem">
+<input type = "submit" value = "add" name="doThisToItem">
+</form>
 </body>
 </html>
