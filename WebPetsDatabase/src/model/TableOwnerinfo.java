@@ -68,4 +68,10 @@ public class TableOwnerinfo {
 	public String returnOwnerDetails() {
 		return name + ": " + type + " - " + owner;
 	}
+
+	@Override
+	public String toString() {
+		return "TableOwnerinfo [id=" + id + ", type=" + type + ", name=" + name + ", owner=" + owner + "]";
+	}
+	
 }
